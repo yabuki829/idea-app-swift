@@ -19,6 +19,8 @@
 		1A087DBF29E2908500E4C781 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DBE29E2908500E4C781 /* Idea.swift */; };
 		1A087DC229E2AB1400E4C781 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DC129E2AB1400E4C781 /* RouletteView.swift */; };
 		1A087DC529E2ACD000E4C781 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DC429E2ACD000E4C781 /* UIView+Extension.swift */; };
+		1A86F65929E2CF19000C907D /* RouletteStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86F65829E2CF19000C907D /* RouletteStackView.swift */; };
+		1A86F65C29E2DDA2000C907D /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86F65B29E2DDA2000C907D /* WordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1A087DBE29E2908500E4C781 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		1A087DC129E2AB1400E4C781 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
 		1A087DC429E2ACD000E4C781 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1A86F65829E2CF19000C907D /* RouletteStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteStackView.swift; sourceTree = "<group>"; };
+		1A86F65B29E2DDA2000C907D /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +109,12 @@
 		1A087D8C29E28CC600E4C781 /* creat-idea-app */ = {
 			isa = PBXGroup;
 			children = (
+				1A86F65A29E2DD87000C907D /* ViewController */,
 				1A087DC329E2AB9800E4C781 /* Extension */,
 				1A087DC029E2AB0100E4C781 /* Views */,
 				1A087DBD29E2907800E4C781 /* Model */,
 				1A087D8D29E28CC600E4C781 /* AppDelegate.swift */,
 				1A087D8F29E28CC600E4C781 /* SceneDelegate.swift */,
-				1A087D9129E28CC600E4C781 /* ViewController.swift */,
 				1A087D9329E28CC600E4C781 /* Main.storyboard */,
 				1A087D9629E28CC800E4C781 /* Assets.xcassets */,
 				1A087D9829E28CC800E4C781 /* LaunchScreen.storyboard */,
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				1A087DC129E2AB1400E4C781 /* RouletteView.swift */,
+				1A86F65829E2CF19000C907D /* RouletteStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +163,15 @@
 				1A087DC429E2ACD000E4C781 /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1A86F65A29E2DD87000C907D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A087D9129E28CC600E4C781 /* ViewController.swift */,
+				1A86F65B29E2DDA2000C907D /* WordViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,11 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A86F65929E2CF19000C907D /* RouletteStackView.swift in Sources */,
 				1A087DBF29E2908500E4C781 /* Idea.swift in Sources */,
 				1A087D9229E28CC600E4C781 /* ViewController.swift in Sources */,
 				1A087DC529E2ACD000E4C781 /* UIView+Extension.swift in Sources */,
 				1A087D8E29E28CC600E4C781 /* AppDelegate.swift in Sources */,
 				1A087DC229E2AB1400E4C781 /* RouletteView.swift in Sources */,
+				1A86F65C29E2DDA2000C907D /* WordViewController.swift in Sources */,
 				1A087D9029E28CC600E4C781 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

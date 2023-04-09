@@ -7,40 +7,26 @@
 
 import UIKit
 
-class VerticalRouletteViewController: UIViewController, CAAnimationDelegate {
-    var rouletteView: UIView! // ルーレットのView
-    var rouletteLabel: UILabel! // ルーレットのラベル
- 
-    
+class ViewController: UIViewController {
+    var rouletteView: RouletteView = {
+        let view = RouletteView()
+        view.backgroundColor = .white
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
- 
-        startVerticalRouletteAnimation()
+        view.addSubview(rouletteView)
+        rouletteView.constraints(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 0,
+                                 left: view.leftAnchor, paddingLeft: 0,
+                                 right: view.rightAnchor, paddingRight: 0,
+                                 bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 0)
+        rouletteView.start()
     }
 
-    func startVerticalRouletteAnimation() {
-        // 回転アニメーションを作成
-        let animation = CABasicAnimation(keyPath: "transform.rotation.x")
-        animation.toValue = NSNumber(value: Double.pi * 4) // 2回転
-        animation.duration = 0.5 // アニメーションの時間
-        animation.delegate = self // delegateを設定
-
-        // アニメーションをルーレットのViewに追加
-        rouletteView.layer.add(animation, forKey: "rotationAnimation")
-    }
-
-    // アニメーション終了時の処理
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        // アニメーションを停止する
-        rouletteView.layer.removeAllAnimations()
-
-        let randomIndex = Int(arc4random_uniform(UInt32(word.count)))
-        rouletteLabel.text = word[randomIndex]
-    }
     
-    
+
 }
 
 

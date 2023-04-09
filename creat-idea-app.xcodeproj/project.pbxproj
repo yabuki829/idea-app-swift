@@ -16,6 +16,9 @@
 		1A087DA529E28CC800E4C781 /* creat_idea_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DA429E28CC800E4C781 /* creat_idea_appTests.swift */; };
 		1A087DAF29E28CC800E4C781 /* creat_idea_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DAE29E28CC800E4C781 /* creat_idea_appUITests.swift */; };
 		1A087DB129E28CC900E4C781 /* creat_idea_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DB029E28CC900E4C781 /* creat_idea_appUITestsLaunchTests.swift */; };
+		1A087DBF29E2908500E4C781 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DBE29E2908500E4C781 /* Idea.swift */; };
+		1A087DC229E2AB1400E4C781 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DC129E2AB1400E4C781 /* RouletteView.swift */; };
+		1A087DC529E2ACD000E4C781 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A087DC429E2ACD000E4C781 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1A087DAA29E28CC800E4C781 /* creat-idea-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "creat-idea-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A087DAE29E28CC800E4C781 /* creat_idea_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creat_idea_appUITests.swift; sourceTree = "<group>"; };
 		1A087DB029E28CC900E4C781 /* creat_idea_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creat_idea_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A087DBE29E2908500E4C781 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+		1A087DC129E2AB1400E4C781 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
+		1A087DC429E2ACD000E4C781 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 		1A087D8C29E28CC600E4C781 /* creat-idea-app */ = {
 			isa = PBXGroup;
 			children = (
+				1A087DC329E2AB9800E4C781 /* Extension */,
+				1A087DC029E2AB0100E4C781 /* Views */,
+				1A087DBD29E2907800E4C781 /* Model */,
 				1A087D8D29E28CC600E4C781 /* AppDelegate.swift */,
 				1A087D8F29E28CC600E4C781 /* SceneDelegate.swift */,
 				1A087D9129E28CC600E4C781 /* ViewController.swift */,
@@ -125,6 +134,30 @@
 				1A087DB029E28CC900E4C781 /* creat_idea_appUITestsLaunchTests.swift */,
 			);
 			path = "creat-idea-appUITests";
+			sourceTree = "<group>";
+		};
+		1A087DBD29E2907800E4C781 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A087DBE29E2908500E4C781 /* Idea.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A087DC029E2AB0100E4C781 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A087DC129E2AB1400E4C781 /* RouletteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A087DC329E2AB9800E4C781 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1A087DC429E2ACD000E4C781 /* UIView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A087DBF29E2908500E4C781 /* Idea.swift in Sources */,
 				1A087D9229E28CC600E4C781 /* ViewController.swift in Sources */,
+				1A087DC529E2ACD000E4C781 /* UIView+Extension.swift in Sources */,
 				1A087D8E29E28CC600E4C781 /* AppDelegate.swift in Sources */,
+				1A087DC229E2AB1400E4C781 /* RouletteView.swift in Sources */,
 				1A087D9029E28CC600E4C781 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +476,7 @@
 				DEVELOPMENT_TEAM = YA5HXFT63V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "creat-idea-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "アイデア作成";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -468,6 +505,7 @@
 				DEVELOPMENT_TEAM = YA5HXFT63V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "creat-idea-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "アイデア作成";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

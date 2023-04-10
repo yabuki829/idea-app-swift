@@ -1,10 +1,20 @@
 import UIKit
 
 class WordViewController: UIViewController {
-    var labels = [UILabel]()
+    
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "傘をさす人")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        view.addSubview(imageView)
+        imageView.constraints(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 10, height: view.frame.width / 2 , width: view.frame.width / 2)
+        imageView.centerX(inView: view)
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -12,6 +22,7 @@ class WordViewController: UIViewController {
         for i in 0..<word.count{
             let label = UILabel()
             view.addSubview(label)
+            label.layer.zPosition = -1
             label.text = word[i]
             label.textColor = .white
             label.textAlignment = .left

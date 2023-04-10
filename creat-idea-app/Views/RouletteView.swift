@@ -13,6 +13,7 @@ class RouletteView:UIView, CAAnimationDelegate {
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 24)
         label.textAlignment = .center
+        label.numberOfLines = 0
         return label
     }()
     var isStart = false

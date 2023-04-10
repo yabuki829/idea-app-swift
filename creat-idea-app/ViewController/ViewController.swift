@@ -17,27 +17,25 @@ class ViewController: UIViewController {
         sv.spacing = 10
         return sv
     }()
-    
-    let rouletteButton:UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .white
-        
-        return button
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "悩む人")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .link
         
         settingRouletteView()
-        view.addSubview(rouletteButton)
-        rouletteButton.centerX(inView: view)
-        rouletteButton.constraints( bottom: view.bottomAnchor, paddingBottom: 40,
-                                    height: view.frame.width / 5, width: view.frame.width / 3)
-        rouletteButton.addTarget(self, action: #selector(tapRouletteButton), for: .touchDown)
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapRouletteButton(_:)))
+        imageView.addGestureRecognizer(tapGesture)
+        imageView.isUserInteractionEnabled = true
+       
     }
-    @objc func tapRouletteButton(){
+    @objc func tapRouletteButton(_ sender: UITapGestureRecognizer){
         stackView.start()
     }
     // ルーレットの設定
@@ -47,6 +45,9 @@ class ViewController: UIViewController {
                               left: view.leftAnchor, paddingLeft: 10,
                               right: view.rightAnchor, paddingRight: 10,
                               height: view.frame.width / 2)
+        view.addSubview(imageView)
+        imageView.constraints(top: stackView.bottomAnchor, paddingTop: 10, height: view.frame.width - 60 , width: view.frame.width - 60)
+        imageView.centerX(inView: view)
         stackView.start()
         
     }

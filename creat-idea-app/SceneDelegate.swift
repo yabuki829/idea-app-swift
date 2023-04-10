@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
           
      
         
-            let vc = WordViewController()
+            let vc = MainTabbarController()
             window.rootViewController = UINavigationController(rootViewController: vc)
             
             

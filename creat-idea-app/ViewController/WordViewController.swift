@@ -16,7 +16,6 @@ class WordViewController: UIViewController {
             label.textColor = .white
             label.textAlignment = .left
             label.frame = CGRect(x: CGFloat.random(in: -50..<(view.bounds.width-20)), y: -50, width: view.frame.width, height: 20)
-//            labels.append(label)
             // アニメーション実行中の配列
             Timer.scheduledTimer(withTimeInterval: TimeInterval.random(in: 5...100.0), repeats: false) { (_) in
                 // 1秒後に実行されるコード
